@@ -24,3 +24,56 @@ This repository contains the implementation of a DNS server that supports both *
    ```bash
    git clone https://github.com/aditya-tangirala/dns_implementation.git
    cd dns_implementation
+   ```
+2. **Install dependencies:**
+   The server requires Python 3.6+ and standard libraries. If there are third-party dependencies, install them using:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. **Run the server:**
+   ```bash
+   python dns_server.py --mode recursive    # For recursive mode
+   python dns_server.py --mode iterative    # For iterative mode
+   ```
+
+2. **Configuration:**
+   - Edit the configuration file (if present) to specify DNS root servers, cache settings, or supported record types.
+   - By default, the server listens on port 5353 (can be changed via command-line).
+
+3. **Testing:**
+   - Use the provided client script or a tool like `dig` or `nslookup`:
+     ```bash
+     dig @localhost -p 5353 example.com
+     ```
+
+## Project Structure
+
+```
+dns_implementation/
+├── dns_server.py       # Main server code
+├── dns_client.py       # Sample DNS client
+├── utils/              # Utilities and helper functions
+├── tests/              # Unit tests
+├── README.md           # Project documentation
+└── requirements.txt    # Python dependencies
+```
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new features.
+
+1. Fork the repository and clone it locally.
+2. Create a new branch.
+3. Make your changes and add tests.
+4. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, please open an issue or reach out via [GitHub Issues](https://github.com/aditya-tangirala/dns_implementation/issues).
